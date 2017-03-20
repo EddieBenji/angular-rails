@@ -1,5 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { HomepageComponent }  from './homepage/homepage.component';
 import { AppComponent } from './app.component';
@@ -11,7 +12,8 @@ import { ProposalNewComponent } from './proposal/proposal-new.component';
 @NgModule({
   imports: [
     BrowserModule,
-    FreelanceRouting
+    FreelanceRouting,
+    FormsModule
   ],
   declarations: [
     AppComponent,
