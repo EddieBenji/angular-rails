@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-homepage',
-  template: `<h1>Hello {{name}}!</h1>`,
+  templateUrl: './home.component.html'
 })
-export class HomepageComponent  { name = 'Angular'; }
+export class HomepageComponent {
+  name = 'Angular';
+}
