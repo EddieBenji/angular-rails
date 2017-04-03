@@ -1,9 +1,32 @@
-<!--<h1>Navigation!</h1>-->
+<nav class="navbar navbar-fixed-top navbar-light bg-faded">
+  <div class="container">
+    <ul class="nav navbar-nav show-inline">
+      <li class="nav-item show-inline">
+        <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item show-inline">
+        <a class="nav-link" [routerLink]="['/documents']" routerLinkActive="active">Docs</a>
+      </li>
+      <li class="nav-item dropdown show-inline">
 
-<a routerLink="/home">Home</a>
-<a routerLink="/documents">Docs</a>
-<a routerLink="/proposals">Proposals</a>
-<a routerLink="/proposals/new">New Proposal</a>
+        <div ngbDropdown class="d-inline-block dropdown-links">
+
+          <button class="btn btn-outline-primary" id="proposal-dropdown" ngbDropdownToggle>
+            Proposals
+          </button>
+
+          <div class="dropdown-menu" aria-labelledby="proposal-dropdown">
+            <a class="dropdown-item" [routerLinkActiveOptions]="{ exact:true }" [routerLink]="['/proposals']"
+               routerLinkActive="active">Proposals</a>
+            <a class="dropdown-item" [routerLink]="['/proposals/new']" routerLinkActive="active">New Proposal</a>
+          </div>
+
+        </div>
+
+      </li>
+    </ul>
+  </div>
+</nav>
 
 
 <!--This works as the yield from rails!-->

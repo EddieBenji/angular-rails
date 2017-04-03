@@ -1,12 +1,14 @@
 <h1>{{pageTitle}}</h1>
 
-<div *ngFor="let doc of documents; trackBy: doc?.title">
-  <h3>{{doc.title}}</h3>
-  <em>{{doc.description}}</em>
-  <div>
-    <a href="{{doc.file_url}}" target="_blank">Download the file</a>
+<div class="card" *ngFor="let doc of documents; trackBy: doc?.title">
+  <img class="card-img-top" src="{{doc.image_url}}" alt="Card image cap">
+  <div class="card-block">
+
+    <h4 class="card-title">{{doc.title}}</h4>
+    <p class="card-text">{{doc.description}}</p>
+    <p class="card-text"> <small class="text-muted">{{doc.updated_at}}</small></p>
+    <div >
+      <a class="btn btn-lg btn-primary" href="{{doc.file_url}}" target="_blank">Download the file</a>
+    </div>
   </div>
-  <p>{{doc.updated_at}}</p>
-  <p>{{doc.image_url}}</p>
-  <hr>
 </div>
