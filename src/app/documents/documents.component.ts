@@ -14,21 +14,21 @@ export class DocumentsComponent {
       description: 'description',
       file_url: 'google.com',
       updated_at: 'yesterday',
-      image_url: 'google.com'
+      image_url: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Mistakes-to-avoid-when-hiring-freelancers.jpg'
     },
     {
       title: 'my second doc',
       description: 'second description',
       file_url: 'gmail.com',
       updated_at: 'today',
-      image_url: 'gmail.com'
+      image_url: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Mistakes-to-avoid-when-hiring-freelancers.jpg'
     },
     {
       title: 'my last doc',
       description: 'second description',
       file_url: 'gmail.com',
       updated_at: 'today',
-      image_url: 'gmail.com'
+      image_url: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Mistakes-to-avoid-when-hiring-freelancers.jpg'
     }
   ];
 }
