@@ -3,7 +3,8 @@ import { Document } from './documents.model';
 @Component({
   moduleId: module.id,
   selector: 'app-documents',
-  templateUrl: './documents.component.html'
+  templateUrl: './documents.component.html',
+  styleUrls:['./documents.component.css']
 })
 
 export class DocumentsComponent {

@@ -4,11 +4,7 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'app',
   templateUrl: './app.component.html',
-  styles: [ `
-    .show-inline {
-      display: inline-block;
-    }
-  ` ]
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
