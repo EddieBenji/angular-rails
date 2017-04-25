@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { HomepageComponent }  from './homepage/homepage.component';
@@ -17,7 +18,8 @@ import { ProposalShowComponent } from './proposal/proposal-show.component';
     BrowserModule,
     FreelanceRouting,
     FormsModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpModule
   ],
   declarations: [
     AppComponent,
