@@ -3,7 +3,8 @@ import { Proposal } from './proposal.model';
 @Component({
   moduleId: module.id,
   selector: 'app-proposal-list',
-  templateUrl: './proposal-list.component.html'
+  templateUrl: './proposal-list.component.html',
+  styleUrls:['./proposal-list.component.css']
 })
 
 export class ProposalListComponent {

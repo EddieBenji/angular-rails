@@ -1,5 +1,16 @@
-<h1>Proposal list</h1>
+<div class="container">
+  <div class="list-group">
+    <a class="list-group-item list-group-item-action active">
+      <h1 class="headline">Proposal list</h1>
+    </a>
+    <a routerLink="/proposal/{{proposal.id}}/show"
+       *ngFor="let proposal of proposals; trackBy: proposal?.id"
+       class="list-group-item list-group-item-action flex-column align-items-start proposal-link">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{proposal.customer}}</h5>
+        <small class="text-muted">{{proposal.hourly_rate*proposal.estimated_hours}}</small>
+      </div>
+    </a>
+  </div>
 
-<div *ngFor="let proposal of proposals; trackBy: proposal?.id">
-  <a routerLink="/proposal/{{proposal.id}}/show">{{proposal.id}}-{{proposal.customer}}: {{proposal.portfolio_url}}</a>
 </div>
