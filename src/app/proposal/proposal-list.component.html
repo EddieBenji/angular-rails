@@ -7,8 +7,11 @@
        *ngFor="let proposal of proposals; trackBy: proposal?.id"
        class="list-group-item list-group-item-action flex-column align-items-start proposal-link">
       <div class="d-flex w-100 justify-content-between">
+
         <h5 class="mb-1">{{proposal.customer}}</h5>
-        <small class="text-muted">{{proposal.hourly_rate*proposal.estimated_hours}}</small>
+        <small class="text-muted">
+          {{proposal.hourly_rate*proposal.estimated_hours | currency:'USD':true:'.0'}}
+        </small>
       </div>
     </a>
   </div>

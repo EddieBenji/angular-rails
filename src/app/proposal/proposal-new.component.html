@@ -103,7 +103,7 @@
       <p>It'll take {{proposal.estimated_hours}} hours. The project should take {{proposal.weeks_to_complete}}
         weeks to complete</p>
       <p>My hourly rate of {{proposal.hourly_rate}}/hour, gives an estimated total of
-        {{proposal.hourly_rate*proposal.estimated_hours}}</p>
+        {{proposal.hourly_rate*proposal.estimated_hours | currency:'USD':true:'.0'}}</p>
     </div>
   </div>
 
