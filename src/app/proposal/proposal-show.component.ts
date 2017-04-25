@@ -3,7 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   moduleId: module.id,
   selector: 'app-proposal-show',
-  templateUrl: './proposal-show.component.html'
+  templateUrl: './proposal-show.component.html',
+  styles: [ `
+    .proposal-card {
+      padding: 30px;
+    }
+  ` ]
 })
 
 export class ProposalShowComponent implements OnInit {
