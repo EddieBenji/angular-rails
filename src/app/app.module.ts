@@ -7,6 +7,7 @@ import { HomepageComponent }  from './homepage/homepage.component';
 import { AppComponent } from './app.component';
 import { FreelanceRouting } from './app-routing.module';
 import { DocumentsComponent } from './documents/documents.component';
+import { DocumentsService } from './documents/documents.service';
 import { ProposalListComponent } from './proposal/proposal-list.component';
 import { ProposalNewComponent } from './proposal/proposal-new.component';
 import { ProposalShowComponent } from './proposal/proposal-show.component';
@@ -26,6 +27,7 @@ import { ProposalShowComponent } from './proposal/proposal-show.component';
     ProposalNewComponent,
     ProposalShowComponent
   ],
+  providers: [ DocumentsService ],
   // Which component you want to start:
   bootstrap: [ AppComponent ]
 })
