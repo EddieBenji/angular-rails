@@ -12,6 +12,7 @@ import { DocumentsService } from './documents/documents.service';
 import { ProposalListComponent } from './proposal/proposal-list.component';
 import { ProposalNewComponent } from './proposal/proposal-new.component';
 import { ProposalShowComponent } from './proposal/proposal-show.component';
+import { ProposalService } from './proposal/proposal.service';
 
 @NgModule({
   imports: [
@@ -29,7 +30,10 @@ import { ProposalShowComponent } from './proposal/proposal-show.component';
     ProposalNewComponent,
     ProposalShowComponent
   ],
-  providers: [ DocumentsService ],
+  providers: [
+    DocumentsService,
+    ProposalService
+  ],
   // Which component you want to start:
   bootstrap: [ AppComponent ]
 })

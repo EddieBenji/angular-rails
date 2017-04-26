@@ -1,18 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Proposal } from './proposal.model';
+import { ProposalService } from './proposal.service';
+import { Observable } from 'rxjs/Rx';
 @Component({
   moduleId: module.id,
   selector: 'app-proposal-list',
   templateUrl: './proposal-list.component.html',
-  styleUrls:['./proposal-list.component.css']
+  styleUrls: [ './proposal-list.component.css' ]
 })
 
-export class ProposalListComponent {
-  proposalOne: Proposal = new Proposal('http://www.google.com', 1, 'Lalo', 'RoR', 150, 120, 15,
-    'eduardo_benji@hotmail.com');
-  proposalTwo: Proposal = new Proposal('http://www.google.com', 99, 'ABC company', 'RoR', 150, 120, 15,
-    'eduardo_benji@hotmail.com');
-  proposalThree: Proposal = new Proposal('http://www.google.com', 300, 'Great other company', 'RoR', 150, 120, 15,
-    'eduardo_benji@hotmail.com');
-  proposals: Proposal[ ] = [ this.proposalOne, this.proposalTwo, this.proposalThree ];
+export class ProposalListComponent implements OnInit {
+  proposals: Proposal[ ] = [];
+  errorMessage: string;
+
+  constructor(private proposalService: ProposalService) {
+    // Empty
+  }
+
+  setProposals() {
+    this.proposalService.getProposals()
+      .subscribe(
+        (props: Proposal[]) => this.proposals = props,
+        error => this.errorMessage = error
+      );
+  }
+
+  ngOnInit(): void {
+    let timer = Observable.timer(0, 5000);
+    timer.subscribe(() => this.setProposals());
+  }
+
 }
