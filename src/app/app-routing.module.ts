@@ -13,7 +13,7 @@ const APP_ROUTES: Routes = [
   { path: 'documents', component: DocumentsComponent },
   { path: 'proposals', component: ProposalListComponent },
   { path: 'proposals/new', component: ProposalNewComponent },
-  { path: 'proposal/:id/show', component: ProposalShowComponent },
+  { path: 'proposal/:id', component: ProposalShowComponent },
 ];
 
 export const FreelanceRouting = RouterModule.forRoot(APP_ROUTES);
