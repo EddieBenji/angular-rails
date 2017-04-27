@@ -1,9 +1,14 @@
 <div class="container">
   <div class="card proposal-card">
-    <h1>Show component</h1>
-    <div>
-      The id for this proposal is: {{id}}
-    </div>
+    <p>Hi {{proposal?.customer}},</p>
 
+    <p>This is a proposal! checkout my portfolio <a href="{{proposal?.portfolio_url}}" target="_blank">here</a></p>
+
+    <p>I'll be using {{proposal?.tools}}</p>
+    <p>It'll take {{proposal?.estimated_hours}} hours. The project should take {{proposal?.weeks_to_complete}}
+      weeks to complete</p>
+    <p>My hourly rate of {{proposal?.hourly_rate}}/hour, gives an estimated total of
+      {{proposal?.hourly_rate*proposal?.estimated_hours | currency:'USD':true:'.0'}}</p>
   </div>
+
 </div>

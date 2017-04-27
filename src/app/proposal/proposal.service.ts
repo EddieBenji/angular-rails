@@ -8,16 +8,10 @@ import { Proposal } from './proposal.model';
 
 @Injectable()
 export class ProposalService {
-  private proposalsUrl = 'http://0.0.0.0:3002/proposals.json';
+  private proposalsUrl = 'http://0.0.0.0:3002/proposals';
 
   constructor(private http: Http) {
     // Empty
-  }
-
-  public getProposals(): Observable<Proposal[]> {
-    return this.http.get(this.proposalsUrl)
-      .map((response: Response) => <Document[]>response.json())
-      .catch(this.handleError);
   }
 
   private handleError(error: Response | any) {
@@ -31,5 +25,15 @@ export class ProposalService {
     }
     console.log(errMsg);
     return Observable.throw(errMsg);
+  }
+
+  public getProposals(): Observable<Proposal[]> {
+    return this.http.get(this.proposalsUrl)
+      .map((response: Response) => <Document[]>response.json())
+      .catch(this.handleError);
+  }
+
+  public getProposal(id: number) {
+    return this.http.get(this.proposalsUrl + '/' + id);
   }
 }
